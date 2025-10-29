@@ -1,8 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Pretendard Rounded, sans-serif;
   text-align: center;
   margin-top: 100px;
-  background: linear-gradient(to bottom, #dde5ff, #eeddff);
+  background: #F8EE92;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #414241;
@@ -32,7 +32,7 @@ button {
   border-radius: 25px;
   cursor: pointer;
   border: none;
-  background: linear-gradient(135deg, #ffb6e6, #ffc3a0);
+  background: #90D999;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: all 0.3s ease-in-out;
@@ -51,19 +51,6 @@ button:hover {
 button:active {
   transform: translateY(0px) scale(0.98);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* 버튼 안에 반짝이는 효과 */
-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75px;
-  width: 50px;
-  height: 100%;
-  background: rgba(255,255,255,0.6);
-  transform: skewX(-25deg);
-  transition: left 0.5s ease;
 }
 
 button:hover::before {
