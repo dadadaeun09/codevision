@@ -1,0 +1,65 @@
+body {
+  font-family: 'Pretendard Rounded', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  color: #333;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #3f52b5;
+}
+
+button{
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+main-btn {
+  background-color: #3f51b5;
+  color: white;
+  box-shodow: 0 4px 12px rgba(63, 81, 181, 0.4);
+}
+
+.main-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(63, 81, 181, 0.2);
+}
+
+.outline-btn {
+  background: transpatrent;
+  border: 2px solid #3f51b5;
+}
+
+.outline-btn:hover {
+  background: #3ff51b5;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.outline-btn:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
