@@ -43,7 +43,7 @@ button {
 
 /* 버튼 hover 시 */
 button:hover {
-  background: #C3E6C1;
+  background: #B9D5DE;
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
