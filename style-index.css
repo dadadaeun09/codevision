@@ -1,5 +1,5 @@
 body {
-  font-family: Pretendard Rounded, sans-serif;
+  font-family: Nanum Square Round, sans-serif;
   text-align: center;
   margin-top: 100px;
   background: #F8EE92;
@@ -10,7 +10,7 @@ body {
 
 .top-note {
   font-size: 30px;
-  font-weight: bold
+  font-weight: bold;
   color: #414241;
   margin-top: 10px;
   margin-bottom: 20px;
