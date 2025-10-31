@@ -9,7 +9,7 @@ body {
 }
 
 .top-note {
-  font-size: 14px;
+  font-size: 30px;
   color: #414241;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -25,11 +25,11 @@ h1 {
 
 /* 버튼 디자인 */
 button {
-  margin: 12px;
-  padding: 15px 35px;
-  font-size: 18px;
+  margin: 14px;
+  padding: 17px 37px;
+  font-size: 20px;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 27px;
   cursor: pointer;
   border: none;
   background: #90D999;
@@ -42,7 +42,7 @@ button {
 
 /* 버튼 hover 시 */
 button:hover {
-  background: linear-gradient(135deg, #ff9fda, #ffb380);
+  background: #A70CDC;
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
