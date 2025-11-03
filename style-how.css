@@ -1,56 +1,58 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>how to make - 테스트</title>
-<style>
-  /* 기본 리셋 */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+// ================================
+// 바로 적용하는 강제 스타일 + 래퍼 추가 스니펫
+// 콘솔에 붙여넣으면 즉시 작동합니다.
+// ================================
+(function(){
+  // 1) 강제 스타일 추가
+  const css = `
+    *{box-sizing:border-box!important}
+    html,body{height:100%!important;width:100%!important;margin:0!important;padding:0!important;}
+    body{
+      display:flex!important;
+      justify-content:center!important;
+      align-items:flex-start!important;
+      background:#fff59d!important;
+      font-family:Arial,Helvetica,sans-serif!important;
+      padding:30px!important;
+      overflow:auto!important;
+    }
+    .__center_inject {
+      width: min(900px,90vw);
+      max-height:86vh;
+      overflow:auto;
+      background:#fff9c4!important;
+      padding:36px 44px!important;
+      border-radius:14px!important;
+      box-shadow:0 6px 20px rgba(0,0,0,0.12)!important;
+      opacity:0!important;
+      transform:scale(0.85)!important;
+      animation:__fadeInPop 900ms cubic-bezier(.2,.8,.2,1) 80ms forwards!important;
+      -webkit-animation:__fadeInPop 900ms cubic-bezier(.2,.8,.2,1) 80ms forwards!important;
+    }
+    @keyframes __fadeInPop {
+      0%{opacity:0; transform:scale(0.85) translateY(8px);}
+      60%{opacity:1; transform:scale(1.06) translateY(-6px);}
+      100%{opacity:1; transform:scale(1) translateY(0);}
+    }
+    @-webkit-keyframes __fadeInPop {
+      0%{opacity:0; transform:scale(0.85) translateY(8px);}
+      60%{opacity:1; transform:scale(1.06) translateY(-6px);}
+      100%{opacity:1; transform:scale(1) translateY(0);}
+    }
+    .__center_inject h1{font-size:36px;margin:0 0 14px 0}
+    .__center_inject ol{margin-left:22px;line-height:1.6}
+    .__center_inject li{margin:6px 0}
+  `;
+  const style = document.createElement('style');
+  style.id = '__center_inject_style';
+  style.innerHTML = css;
+  document.head.appendChild(style);
 
-  /* 강제 적용을 위해 html, body에 높이와 flex를 !important로 지정 */
-  html, body {
-    height: 100%;
-    width: 100%;
-  }
-  body {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background: #fff59d !important;
-    font-family: Arial, Helvetica, sans-serif !important;
-    overflow: hidden;
-  }
-
-  /* 박스(컨테이너) 스타일 — 중앙에 고정, 애니메이션 포함 */
-  .center-box {
-    width: min(900px, 90vw);
-    max-height: 86vh;
-    overflow: auto;
-    background: #fff9c4;
-    padding: 36px 44px;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    /* 초기 상태 (숨김 + 작게) */
-    opacity: 0;
-    transform: scale(0.85);
-    /* 애니메이션 강제 실행 */
-    animation: fadeInPop 900ms cubic-bezier(.2,.8,.2,1) 120ms forwards;
-  }
-
-  @keyframes fadeInPop {
-    0% { opacity: 0; transform: scale(0.85) translateY(8px); }
-    60% { opacity: 1; transform: scale(1.06) translateY(-6px); }
-    100% { opacity: 1; transform: scale(1) translateY(0); }
-  }
-
-  h1 { font-size: 36px; text-align: left; margin-bottom: 14px; letter-spacing: -0.5px; }
-  ol { margin-left: 22px; line-height: 1.6; }
-  li { margin: 6px 0; }
-
-  /* 만약 기존 스타일이 너무 강하게 덮어쓰면 더 강해지도록 !important 사용 (필요 시) */
-  /* .center-box { display:block !important; } */
-</style>
-</head>
-<body>
-  <div class="ce
+  // 2) 기존 body 자식들을 새 wrapper로 옮김 (이미 wrapper 있으면 스킵)
+  if(!document.querySelector('.__center_inject')) {
+    const wrapper = document.createElement('div');
+    wrapper.className = '__center_inject';
+    // 옮길 때 <script> 태그는 남겨둠
+    const children = Array.from(document.body.childNodes);
+    children.forEach(node=>{
+      if(node.tagName && node.tagName.toLowerCase() === 'scrip
