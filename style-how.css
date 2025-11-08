@@ -45,20 +45,12 @@
   }
 
   h1 { font-size: 36px; text-align: left; margin-bottom: 14px; letter-spacing: -0.5px; }
-  ol { margin-left: 22px; line-height: 1.6; }
-  li { margin: 6px 0; }
-
-/* CSS는 style 태그 내에만! */
-ol ul,
-ol li ul,
-ol ol {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-  /* 만약 기존 스타일이 너무 강하게 덮어쓰면 더 강해지도록 !important 사용 (필요 시) */
-  /* .center-box { display:block !important; } */
+  ol { 
+    list-style: none; 
+    padding-left: 0;
+    margin-left: 0;
+  }
+li { margin: 6px 0; }
 </style>
 </head>
 <body>
