@@ -48,12 +48,15 @@
   ol { margin-left: 22px; line-height: 1.6; }
   li { margin: 6px 0; }
 
-  ol ul,
-  ol li ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-  }
+/* CSS는 style 태그 내에만! */
+ol ul,
+ol li ul,
+ol ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
   /* 만약 기존 스타일이 너무 강하게 덮어쓰면 더 강해지도록 !important 사용 (필요 시) */
   /* .center-box { display:block !important; } */
 </style>
@@ -70,11 +73,6 @@
       <li><strong>6. 레진 붓기</strong><br>완성된 슈링클스에 코팅 역할을 할 레진을 소량 붓고 UV램프로 굳혀줍니다.</li>
       <li><strong>7. 마무리</strong><br>키링 구멍에 줄을 달아 완성합니다. </li>
     </ol>
-ol ol {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
     </ol>
   </div>
   <script>
