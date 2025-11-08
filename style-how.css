@@ -45,11 +45,10 @@
   }
 
   h1 { font-size: 36px; text-align: left; margin-bottom: 14px; letter-spacing: -0.5px; }
-  ol, ul { 
+  ol, ul, li { 
     list-style: none; 
-    padding-left: 0;
-    margin-left: 0;
   }
+
 </style>
 </head>
 <body>
