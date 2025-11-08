@@ -71,8 +71,8 @@ ol ol {
 }
 ol li ul {
   list-style: none;
-  margin: 0;
-  padding-left: 1.2em;
+  padding-left: 0;
+  margin-left: 0;
 }
     </ol>
   </div>
