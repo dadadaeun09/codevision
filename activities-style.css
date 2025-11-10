@@ -1,0 +1,36 @@
+.img-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+.img-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+.img-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.img-block p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.07rem;
+}
+/* 화면이 넓을 때 가로로 나란히 */
+@media (min-width: 800px) {
+  .img-text-wrap {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+  .img-block {
+    max-width: 250px;
+  }
+}
