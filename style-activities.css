@@ -1,8 +1,9 @@
+<style>
 .img-text-wrap {
-  display: flex;           /* 내부 아이템들을 가로(또는 세로) 배치 */
-  flex-wrap: wrap;         /* 화면 좁으면 줄바꿈 가능 */
-  gap: 16px;               /* 이미지 블록 사이 간격 */
-  justify-content: center; /* 중앙 정렬 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -15,7 +16,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-radius: 8px;
   padding: 12px;
-  background-color: #F8EE92;  /* ← 세미콜론(;) 확인! */
+  background-color: #F8EE92 !important; /* 노란색 */
 }
 
 .img-block img {
@@ -29,3 +30,15 @@
   text-align: center;
   font-size: 1rem;
 }
+</style>
+
+<div class="img-text-wrap">
+  <div class="img-block">
+    <img src="https://via.placeholder.com/300x200.png?text=샘플이미지1" alt="샘플 이미지 1">
+    <p>이미지 1 설명 텍스트</p>
+  </div>
+  <div class="img-block">
+    <img src="https://via.placeholder.com/300x200.png?text=샘플이미지2" alt="샘플 이미지 2">
+    <p>이미지 2 설명 텍스트</p>
+  </div>
+</div>
