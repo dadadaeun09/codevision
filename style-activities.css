@@ -7,15 +7,15 @@
 }
 
 .img-block {
-  flex: 1 1 300px;         /* 최소 300px, 가변 넓이 */
+  flex: 1 1 300px;
   max-width: 350px;
   display: flex;
-  flex-direction: column;  /* 이미지 위에 글이 세로 배치 */
-  align-items: center;     /* 중앙 정렬 */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 예쁜 그림자 효과 */
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border-radius: 8px;
   padding: 12px;
-  background-color: #F8EE92;  /* 배경색 */
+  background-color: #F8EE92;  /* ← 세미콜론(;) 확인! */
 }
 
 .img-block img {
