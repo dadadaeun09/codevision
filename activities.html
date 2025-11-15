@@ -30,15 +30,19 @@
       align-items: center;
     }
     .img-block img {
-      width: auto;
-      max-width: none;
-      height: auto;
+      /* 원본 크기 유지 & 스타일 적용 */
+      width: auto !important;
+      height: auto !important;
+      max-width: none !important;
+      max-height: none !important;
+      
       border-radius: 8px;
       margin-bottom: 15px;
       background-color: #e0e0e0;
       min-height: 300px;
-      max-height: none;
-      object-fit: cover;
+      
+      /* object-fit 제거 (원본 그대로 보여줌) */
+      object-fit: none;
     }
     .img-block p {
       font-size: 16px;
@@ -47,7 +51,7 @@
       text-align: center;
       max-width: 600px;
     }
-    </style>
+  </style>
 </head>
 <body>
   <div class="img-text-wrap">
