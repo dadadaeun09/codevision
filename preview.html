@@ -1,5 +1,112 @@
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8"  />
     <meta name="viewport" content="width=device-width, initial-scale=1"  />
     <title>preview</title>
+  <style>
+    /* 페이지 전체 기본 스타일 */
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    /* 주제의 제목(버튼 역할) 스타일 */
+    .accordion {
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+      padding: 16px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      margin-bottom: 8px;
+    }
+
+    /* 마우스를 올렸을 때 시각적 효과 */
+    .accordion:hover {
+      background-color: #eef5ff;
+    }
+
+    /* 클릭 시 활성화된 버튼(열린 상태)의 스타일 */
+    .active {
+      background-color: #dce9ff;
+      font-weight: bold;
+    }
+
+    /* 펼쳐질 내용 박스 기본 설정 (기본은 안 보이게) */
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none; /* 처음엔 숨김 */
+      overflow: hidden;
+      border-left: 3px solid #5c8df6;
+      margin-bottom: 8px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* 펼쳐진 상태의 내용 */
+    .panel.show {
+      display: block; /* 클릭 시 표시 */
+      animation: fadeIn 0.5s ease; /* 부드럽게 나타남 */
+    }
+
+    /* 간단한 페이드 인 애니메이션 */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
+<body>
+
+  <h1>주제별 내용 펼치기 예시</h1>
+
+  <!-- 주제 1 -->
+  <button class="accordion">🎨 주제 1: 디자인</button>
+  <div class="panel">
+    <p>디자인은 시각적 요소를 통해 메시지를 전달하는 과정입니다. 색상, 균형, 여백 등이 중요한 역할을 합니다.</p>
+  </div>
+
+  <!-- 주제 2 -->
+  <button class="accordion">💻 주제 2: 프로그래밍</button>
+  <div class="panel">
+    <p>프로그래밍은 컴퓨터가 수행할 작업을 코드로 작성하는 행위입니다. 논리적 사고와 구조적 접근이 필요합니다.</p>
+  </div>
+
+  <!-- 주제 3 -->
+  <button class="accordion">🚀 주제 3: 미래 기술</button>
+  <div class="panel">
+    <p>인공지능, 양자컴퓨팅, 우주탐사 등은 미래 사회를 바꿀 첨단 기술로 주목받고 있습니다.</p>
+  </div>
+
+  <script>
+    // 모든 'accordion' 클래스를 가진 버튼들을 가져오기
+    const accordions = document.querySelectorAll(".accordion");
+
+    // 각 버튼에 클릭 이벤트 추가
+    accordions.forEach((acc) => {
+      acc.addEventListener("click", function() {
+        // 버튼의 active 상태를 토글함 (클릭하면 스타일 변경)
+        this.classList.toggle("active");
+
+        // 버튼 바로 다음에 있는 panel 요소 가져오기
+        const panel = this.nextElementSibling;
+
+        // 이미 열려 있으면 닫고, 닫혀 있으면 열기
+        if (panel.classList.contains("show")) {
+          panel.classList.remove("show");
+        } else {
+          panel.classList.add("show");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
