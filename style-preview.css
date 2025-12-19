@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+    /* 페이지 전체 기본 스타일 */
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      line-height: 1.6;
+    }
 
+    /* 주제의 제목(버튼 역할) 스타일 */
+    .accordion {
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+      padding: 16px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      margin-bottom: 8px;
+    }
+
+    /* 마우스를 올렸을 때 시각적 효과 */
+    .accordion:hover {
+      background-color: #eef5ff;
+    }
+
+    /* 클릭 시 활성화된 버튼(열린 상태)의 스타일 */
+    .active {
+      background-color: #dce9ff;
+      font-weight: bold;
+    }
+
+    /* 펼쳐질 내용 박스 기본 설정 (기본은 안 보이게) */
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none; /* 처음엔 숨김 */
+      overflow: hidden;
+      border-left: 3px solid #5c8df6;
+      margin-bottom: 8px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* 펼쳐진 상태의 내용 */
+    .panel.show {
+      display: block; /* 클릭 시 표시 */
+      animation: fadeIn 0.5s ease; /* 부드럽게 나타남 */
+    }
+
+    /* 간단한 페이드 인 애니메이션 */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
