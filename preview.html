@@ -30,21 +30,5 @@
   <div class="panel">
     <p> 오이는 지민이가 가장 싫어하는 음식입니다. 저도 특유의 향 때문에 별로 좋아하지 않는데요, 그래도 김밥에 들어있는 오이는 작아서 그런지 먹을 수 있습니다. 오이는 오이팩으로 피부에 양보합시다. </p>
   </div>
-  <script>
-    const accordions = document.querySelectorAll(".accordion");
 
-    accordions.forEach((acc) => {
-      acc.addEventListener("click", function() {
-        this.classList.toggle("active");
-
-        const panel = this.nextElementSibling;
-
-        if (panel.classList.contains("show")) {
-          panel.classList.remove("show");
-        } else {
-          panel.classList.add("show");
-        }
-      });
-    });
-  </script>
 </body>
