@@ -8,37 +8,37 @@
   <h1>완두콩</h1>
 
   <!-- 완두콩 -->
-  <button class="accordion">🎨 주제 1: 디자인</button>
+  <button class="accordion">완두콩</button>
   <div class="panel">
-    <p>디자인은 시각적 요소를 통해 메시지를 전달하는 과정입니다. 색상, 균형, 여백 등이 중요한 역할을 합니다.</p>
+    <p> 완두콩은 맛이 없습니다. 사람에 따라 기호 정도가 다르지만 저는 매우 싫어하는 편입니다. 콩은 별로예요. </p>
   </div>
 
-  <!-- 주제 2 -->
-  <button class="accordion">💻 주제 2: 프로그래밍</button>
+  <!-- 방울토마토 -->
+  <button class="accordion">방울토마토</button>
   <div class="panel">
-    <p>프로그래밍은 컴퓨터가 수행할 작업을 코드로 작성하는 행위입니다. 논리적 사고와 구조적 접근이 필요합니다.</p>
+    <p> 방울토마토는 일반 방울토마토 말고 스테비아 방울토마토가 맛있습니다. 일명 단마토라고도 불리는 스테비아 방울토마토는 정말 달달한 것이 특징입니다. 아주 맛있어요. </p>
   </div>
 
-  <!-- 주제 3 -->
-  <button class="accordion">🚀 주제 3: 미래 기술</button>
+  <!-- 고구마 -->
+  <button class="accordion">고구마</button>
   <div class="panel">
-    <p>인공지능, 양자컴퓨팅, 우주탐사 등은 미래 사회를 바꿀 첨단 기술로 주목받고 있습니다.</p>
+    <p> 고구마는 삶거나 쪄먹는 것보다 구워 먹는 것이 더 맛있습니다. 겨울철에 군고구마.. 빠질 수 없는 간식이죠. 물고구마나 밤고구마는 구워 먹으면 맛이 없습니다. 물렁하거나 퍽퍽하거든요. 꿀고구마를 구워 먹어야 정말 맛있는 군고구마를 맛 볼 수 있습니다. </p>
   </div>
 
+  <!-- 오이 -->
+  <button class="accordion">오이</button>
+  <div class="panel">
+    <p> 오이는 지민이가 가장 싫어하는 음식입니다. 저도 특유의 향 때문에 별로 좋아하지 않는데요, 그래도 김밥에 들어있는 오이는 작아서 그런지 먹을 수 있습니다. 오이는 오이팩으로 피부에 양보합시다. </p>
+  </div>
   <script>
-    // 모든 'accordion' 클래스를 가진 버튼들을 가져오기
     const accordions = document.querySelectorAll(".accordion");
 
-    // 각 버튼에 클릭 이벤트 추가
     accordions.forEach((acc) => {
       acc.addEventListener("click", function() {
-        // 버튼의 active 상태를 토글함 (클릭하면 스타일 변경)
         this.classList.toggle("active");
 
-        // 버튼 바로 다음에 있는 panel 요소 가져오기
         const panel = this.nextElementSibling;
 
-        // 이미 열려 있으면 닫고, 닫혀 있으면 열기
         if (panel.classList.contains("show")) {
           panel.classList.remove("show");
         } else {
@@ -47,5 +47,4 @@
       });
     });
   </script>
-
 </body>
